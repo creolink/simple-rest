@@ -54,7 +54,10 @@ With error: `Couldn't connect to Docker daemon at http+docker://localunixsocket`
 - `usermod -aG docker ${USER}` and relogin
 
 Building images takes a while, but at the end you should be logged in into `flaconi_php` docker machine and site should be available in obrowser.
-If the site does not work (`autoloader missed`) please wait a moment. Docker-composer is installing vendor components.
+If the site does not work (`autoloader missed`) please wait a moment. Docker-composer is installing vendor components. Please check `/vendor/` folder - there should be created folders.
+In any case, please install everything with composer (on docker `php` machine): `php composer.phar install`
+
+After installation, there can be problem with rights of `cache` folders. In this case, please do `make clean` (on `php` docker machine).
 
 On docker-php machine you can use `make` to clear cache, create coverage, test, etc. Just execute `make` to see info.
 
@@ -121,7 +124,7 @@ You can use `mc` in `php` & `server` machine if needed.
 Codestyles are checked using Symfony standards: https://github.com/creolink/code_style
 
 
-# Special thanks to Flaconi HR team for this opportunity. #
+# Special thanks to Flaconi HR Team for this opportunity. #
 
 I'm sorry, I haven't covered all codes with tests (behat with fixtures especially), because I just didn't have enough time.
 I used `Swagger` `@SWG` annotations instead of `@ApiDoc` because, `@ApiDoc` is deprecated by Nelmio 3
