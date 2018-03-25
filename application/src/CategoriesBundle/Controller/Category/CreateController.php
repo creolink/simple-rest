@@ -12,6 +12,7 @@ use CategoriesBundle\Exception\InvalidJsonDataException;
 use Swagger\Annotations as SWG;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use CategoriesBundle\Entity\Category;
+use CategoriesBundle\Exception\SaveCategoryException;
 
 class CreateController extends FOSRestController
 {
@@ -20,7 +21,7 @@ class CreateController extends FOSRestController
      *
      * @SWG\Tag(name="Category controller")
      * @SWG\Response(
-     *  response=200, description="Success, Returned with succesfull created category (with category data)",
+     *  response=200, description="Success, Returned with successful created category (with category data)",
      *  @Model(type=Category::class)
      * )
      * @SWG\Response(
@@ -76,7 +77,7 @@ class CreateController extends FOSRestController
                 ->createCategory(
                     $request->getContent()
                 );
-        } catch (InvalidCategoryDataException | InvalidJsonDataException $exception) {
+        } catch (InvalidCategoryDataException | InvalidJsonDataException | SaveCategoryException $exception) {
             throw new CategoryHttpException(
                 $exception->getCode(),
                 $exception->getMessage()
@@ -85,7 +86,7 @@ class CreateController extends FOSRestController
     }
 
     /**
-     * @return CreateCategoryService
+     * @return CreateCategoryService|object
      */
     private function getCreateCategoryService(): CreateCategoryService
     {

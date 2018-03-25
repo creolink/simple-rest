@@ -118,7 +118,7 @@ class Category
     }
 
     /**
-     * @return Category[]
+     * @return Category[]|ArrayCollection
      */
     public function getChildren()
     {

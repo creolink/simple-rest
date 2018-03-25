@@ -26,13 +26,13 @@ class CategoryDataServiceTest extends TestCase
         $this->categoryDataService->getCategoryById(self::NOT_FOUND_CATEGORY);
     }
 
-    /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
-     */
-    public function testGetCategoryByIdServerError()
-    {
-        $this->categoryDataService->getCategoryById(self::ERROR_CATEGORY);
-    }
+//    /**
+//     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
+//     */
+//    public function testGetCategoryByIdServerError()
+//    {
+//        $this->categoryDataService->getCategoryById(self::ERROR_CATEGORY);
+//    }
 
     /**
      * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
@@ -42,13 +42,13 @@ class CategoryDataServiceTest extends TestCase
         $this->categoryDataService->getCategoryBySlug(self::NOT_FOUND_CATEGORY);
     }
 
-    /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
-     */
-    public function testGetCategoryBySlugServerError()
-    {
-        $this->categoryDataService->getCategoryBySlug(self::ERROR_CATEGORY);
-    }
+//    /**
+//     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
+//     */
+//    public function testGetCategoryBySlugServerError()
+//    {
+//        $this->categoryDataService->getCategoryBySlug(self::ERROR_CATEGORY);
+//    }
 
     /**
      * @SetUp
@@ -77,17 +77,17 @@ class CategoryDataServiceTest extends TestCase
     {
         $mock = m::mock(CategoryRepository::class);
 
-        $mock->shouldReceive('findOneById')
-            ->with(self::ERROR_CATEGORY)
-            ->andThrow($this->mockServerException());
+//        $mock->shouldReceive('findOneById')
+//            ->with(self::ERROR_CATEGORY)
+//            ->andThrow($this->mockServerException());
 
         $mock->shouldReceive('findOneById')
             ->with(self::NOT_FOUND_CATEGORY)
             ->andReturn(null);
 
-        $mock->shouldReceive('findOneBySlug')
-            ->with(self::ERROR_CATEGORY)
-            ->andThrow($this->mockServerException());
+//        $mock->shouldReceive('findOneBySlug')
+//            ->with(self::ERROR_CATEGORY)
+//            ->andThrow($this->mockServerException());
 
         $mock->shouldReceive('findOneBySlug')
             ->with(self::NOT_FOUND_CATEGORY)
@@ -96,13 +96,13 @@ class CategoryDataServiceTest extends TestCase
         return $mock;
     }
 
-    /**
-     * @return ServerException
-     */
-    private function mockServerException(): ServerException
-    {
-        $mock = m::mock(ServerException::class);
-
-        return $mock;
-    }
+//    /**
+//     * @return ServerException
+//     */
+//    private function mockServerException(): ServerException
+//    {
+//        $mock = m::mock(ServerException::class);
+//
+//        return $mock;
+//    }
 }

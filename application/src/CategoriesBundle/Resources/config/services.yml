@@ -66,3 +66,8 @@ services:
             - "@categories.service.categoryData"
             - "@categories.repository.category"
             - "@jms_serializer"
+            - "@categories.service.categoryPatcher"
+
+    categories.service.categoryPatcher:
+        class: CategoriesBundle\Service\Patcher\CategoryPatcher
+

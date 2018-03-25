@@ -5,6 +5,8 @@ namespace CategoriesBundle\Repository;
 use CategoriesBundle\Entity\Category;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\ORMException;
+use Doctrine\ORM\OptimisticLockException;
 
 class CategoryRepository
 {
@@ -29,7 +31,7 @@ class CategoryRepository
 
     /**
      * @param string|null $id
-     * @return Category|null
+     * @return Category|null|object
      */
     public function findOneById(string $id = null): ?Category
     {
@@ -38,7 +40,7 @@ class CategoryRepository
 
     /**
      * @param string|null $slug
-     * @return Category|null
+     * @return Category|null|object
      */
     public function findOneBySlug(string $slug = null): ?Category
     {
@@ -66,6 +68,8 @@ class CategoryRepository
     /**
      * @param Category $category
      * @return Category
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function save(Category $category): Category
     {
@@ -78,6 +82,8 @@ class CategoryRepository
     /**
      * @param Category $category
      * @return Category
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function update(Category $category): Category
     {

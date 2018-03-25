@@ -4,7 +4,6 @@ namespace CategoriesBundle\Service\Iterator;
 
 use \RecursiveIteratorIterator;
 use Doctrine\Common\Collections\ArrayCollection;
-use CategoriesBundle\Service\Iterator\CategoryIterator;
 use CategoriesBundle\Entity\Category;
 
 class CategoryIteratorService

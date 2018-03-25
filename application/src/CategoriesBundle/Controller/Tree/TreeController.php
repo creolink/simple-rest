@@ -26,6 +26,7 @@ class TreeController extends FOSRestController
      * )
      *
      * @return TreeDto
+     * @throws CategoryNotFoundException
      */
     public function getTreeAction(): TreeDto
     {
@@ -71,7 +72,7 @@ class TreeController extends FOSRestController
     }
 
     /**
-     * @return CategoriesTreeInterface
+     * @return CategoriesTreeInterface|object
      */
     private function getCompleteCategoriesTreeService(): CategoriesTreeInterface
     {
@@ -79,7 +80,7 @@ class TreeController extends FOSRestController
     }
 
     /**
-     * @return CategoriesTreeInterface
+     * @return CategoriesTreeInterface|object
      */
     private function getVisibleChildCategoriesTreeService(): CategoriesTreeInterface
     {

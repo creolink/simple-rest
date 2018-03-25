@@ -3,7 +3,6 @@
 namespace CategoriesBundle\Service\TreeHandler;
 
 use \RecursiveIteratorIterator;
-use CategoriesBundle\Service\TreeHandler\TreeGeneratorService;
 use CategoriesBundle\Repository\CategoryRepository;
 use CategoriesBundle\DataObject\TreeDto;
 use CategoriesBundle\Service\Iterator\CategoryIteratorService;
