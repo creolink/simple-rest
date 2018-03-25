@@ -4,7 +4,7 @@ namespace CategoriesBundle\Service;
 
 use CategoriesBundle\Exception\CategoryNotFoundException;
 use CategoriesBundle\Entity\Category;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use JMS\Serializer\SerializerInterface;
 use CategoriesBundle\Validator\JsonSchemaValidatorInterface;
 use Doctrine\ORM\ORMException;
@@ -25,7 +25,7 @@ class EditCategoryService
     protected $categoryDataService;
 
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     protected $repository;
 
@@ -42,14 +42,14 @@ class EditCategoryService
     /**
      * @param JsonSchemaValidatorInterface $jsonSchemaValidator
      * @param CategoryDataService $categoryDataService
-     * @param CategoryRepository $repository
+     * @param CategoryRepositoryInterface $repository
      * @param SerializerInterface $serializer
      * @param DocumentPatcherInterface $documentPatcher
      */
     public function __construct(
         JsonSchemaValidatorInterface $jsonSchemaValidator,
         CategoryDataService $categoryDataService,
-        CategoryRepository $repository,
+        CategoryRepositoryInterface $repository,
         SerializerInterface $serializer,
         DocumentPatcherInterface $documentPatcher
     ) {

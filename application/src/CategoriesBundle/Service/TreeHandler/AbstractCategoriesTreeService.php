@@ -2,15 +2,15 @@
 
 namespace CategoriesBundle\Service\TreeHandler;
 
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use \RecursiveIteratorIterator;
-use CategoriesBundle\Repository\CategoryRepository;
 use CategoriesBundle\DataObject\TreeDto;
 use CategoriesBundle\Service\Iterator\CategoryIteratorService;
 
 abstract class AbstractCategoriesTreeService implements CategoriesTreeInterface
 {
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     protected $repository;
 
@@ -25,12 +25,12 @@ abstract class AbstractCategoriesTreeService implements CategoriesTreeInterface
     protected $categoryIteratorService;
 
     /**
-     * @param CategoryRepository $repository
+     * @param CategoryRepositoryInterface $repository
      * @param CategoryIteratorService $categoryIteratorService
      * @param TreeGeneratorService $treeGeneratorService
      */
     public function __construct(
-        CategoryRepository $repository,
+        CategoryRepositoryInterface $repository,
         CategoryIteratorService $categoryIteratorService,
         TreeGeneratorService $treeGeneratorService
     ) {

@@ -5,13 +5,14 @@ namespace CategoriesBundle\Test\Unit\Service\TreeHandler;
 use PHPUnit\Framework\TestCase;
 use CategoriesBundle\Test\Unit\Traits\FixturesTrait;
 use CategoriesBundle\Service\TreeHandler\CompleteCategoriesTreeService;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use CategoriesBundle\Service\Iterator\CategoryIteratorService;
 use CategoriesBundle\Service\TreeHandler\TreeGeneratorService;
 use CategoriesBundle\Service\Transformer\CategoryTransformer;
 use CategoriesBundle\DataObject\TreeDto;
 use CategoriesBundle\Service\TreeHandler\VisibleChildCategoriesTreeService;
 use \Mockery as m;
+use CategoriesBundle\Test\Unit\Fixtures\Exception\FixtureNotFoundException;
 
 class CategoriesTreeServiceTest extends TestCase
 {
@@ -22,7 +23,7 @@ class CategoriesTreeServiceTest extends TestCase
     const CATEGORY_SLUG = 'categoryA1-slug';
 
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     private $mockCategoryRepository;
 
@@ -52,7 +53,7 @@ class CategoriesTreeServiceTest extends TestCase
 
     /**
      * @test
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
+     * @expectedException \CategoriesBundle\Exception\CategoryNotFoundException
      */
     public function testVisibleChildCategoriesTreeForEmptySlug()
     {
@@ -94,7 +95,7 @@ class CategoriesTreeServiceTest extends TestCase
      */
     protected function setUp()
     {
-        $this->mockCategoryRepository = $this->mockCategoryRepository();
+        $this->mockCategoryRepository = $this->mockCategoryRepositoryInterface();
     }
 
     /**
@@ -108,15 +109,16 @@ class CategoriesTreeServiceTest extends TestCase
     }
 
     /**
-     * @return CategoryRepository
+     * @return CategoryRepositoryInterface
+     * @throws FixtureNotFoundException
      */
-    private function mockCategoryRepository(): CategoryRepository
+    private function mockCategoryRepositoryInterface(): CategoryRepositoryInterface
     {
         $categories = $this->createCategories(
             $this->loadFixture(self::FIXTURE_FILE)
         );
 
-        $mock = m::mock(CategoryRepository::class);
+        $mock = m::mock(CategoryRepositoryInterface::class);
 
         $mock->shouldReceive('findByParent')
             ->andReturn($categories);

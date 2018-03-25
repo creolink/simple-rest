@@ -4,7 +4,7 @@ namespace CategoriesBundle\Service;
 
 use CategoriesBundle\Exception\SaveCategoryException;
 use CategoriesBundle\Validator\JsonSchemaValidatorInterface;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use CategoriesBundle\Entity\Category;
 use JMS\Serializer\SerializerInterface;
 use CategoriesBundle\DataObject\CategoryDto;
@@ -21,7 +21,7 @@ class CreateCategoryService
     private $jsonSchemaValidator;
 
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     protected $repository;
 
@@ -37,13 +37,13 @@ class CreateCategoryService
 
     /**
      * @param JsonSchemaValidatorInterface $jsonSchemaValidator
-     * @param CategoryRepository $repository
+     * @param CategoryRepositoryInterface $repository
      * @param CategoryTransformer $transformer
      * @param SerializerInterface $serializer
      */
     public function __construct(
         JsonSchemaValidatorInterface $jsonSchemaValidator,
-        CategoryRepository $repository,
+        CategoryRepositoryInterface $repository,
         CategoryTransformer $transformer,
         SerializerInterface $serializer
     ) {

@@ -4,19 +4,19 @@ namespace CategoriesBundle\Service;
 
 use CategoriesBundle\Exception\CategoryNotFoundException;
 use CategoriesBundle\Entity\Category;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 
 class CategoryDataService
 {
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     protected $repository;
 
     /**
-     * @param CategoryRepository $repository
+     * @param CategoryRepositoryInterface $repository
      */
-    public function __construct(CategoryRepository $repository)
+    public function __construct(CategoryRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }

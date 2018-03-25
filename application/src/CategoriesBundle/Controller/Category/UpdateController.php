@@ -12,7 +12,7 @@ use CategoriesBundle\Exception\CategoryNotFoundException;
 use CategoriesBundle\Exception\CategoryHttpException;
 use CategoriesBundle\Exception\InvalidJsonDataException;
 use CategoriesBundle\Entity\Category;
-use CategoriesBundle\Exception\CategoryPatchException;
+use CategoriesBundle\Exception\DocumentPatchException;
 
 class UpdateController extends FOSRestController
 {
@@ -79,7 +79,7 @@ class UpdateController extends FOSRestController
         try {
             return $this->getEditCategoryService()
                 ->patchVisibility($id, $request->getContent());
-        } catch (CategoryNotFoundException | InvalidJsonDataException | CategoryPatchException $exception) {
+        } catch (CategoryNotFoundException | InvalidJsonDataException | DocumentPatchException $exception) {
             throw new CategoryHttpException(
                 $exception->getCode(),
                 $exception->getMessage()

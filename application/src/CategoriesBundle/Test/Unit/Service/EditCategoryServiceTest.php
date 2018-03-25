@@ -5,7 +5,7 @@ namespace CategoriesBundle\Test\Unit\Service;
 use Doctrine\ORM\ORMException;
 use PHPUnit\Framework\TestCase;
 use CategoriesBundle\Service\EditCategoryService;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use CategoriesBundle\Validator\JsonSchemaValidatorInterface;
 use CategoriesBundle\Service\CategoryDataService;
 use CategoriesBundle\Entity\Category;
@@ -41,7 +41,7 @@ class EditCategoryServiceTest extends TestCase
         $this->editCategoryService = new EditCategoryService(
             $this->mockJsonSchemaValidatorInterface(),
             $this->mockCategoryDataService(),
-            $this->mockCategoryRepository(),
+            $this->mockCategoryRepositoryInterface(),
             $this->mockSerializerInterface(),
             $this->mockDocumentPatcherInterface()
         );
@@ -58,11 +58,11 @@ class EditCategoryServiceTest extends TestCase
     }
 
     /**
-     * @return CategoryRepository
+     * @return CategoryRepositoryInterface
      */
-    private function mockCategoryRepository(): CategoryRepository
+    private function mockCategoryRepositoryInterface(): CategoryRepositoryInterface
     {
-        $mock = m::mock(CategoryRepository::class);
+        $mock = m::mock(CategoryRepositoryInterface::class);
 
         $mock->shouldReceive('update')
             ->andThrow($this->mockORMException());

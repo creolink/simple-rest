@@ -3,15 +3,13 @@
 namespace CategoriesBundle\Repository;
 
 use CategoriesBundle\Entity\Category;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\ORMException;
-use Doctrine\ORM\OptimisticLockException;
 
-class CategoryRepository
+class CategoryRepository implements CategoryRepositoryInterface
 {
     /**
-     * @var EntityManager
+     * @var EntityManagerInterface
      */
     private $entityManager;
 
@@ -21,17 +19,16 @@ class CategoryRepository
     private $repository;
 
     /**
-     * @param EntityManager $entityManager
+     * @param EntityManagerInterface $entityManager
      */
-    public function __construct(EntityManager $entityManager)
+    public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
         $this->repository = $entityManager->getRepository(Category::class);
     }
 
     /**
-     * @param string|null $id
-     * @return Category|null|object
+     * {@inheritdoc}
      */
     public function findOneById(string $id = null): ?Category
     {
@@ -39,8 +36,7 @@ class CategoryRepository
     }
 
     /**
-     * @param string|null $slug
-     * @return Category|null|object
+     * {@inheritdoc}
      */
     public function findOneBySlug(string $slug = null): ?Category
     {
@@ -48,8 +44,7 @@ class CategoryRepository
     }
 
     /**
-     * @param string|null $parentId
-     * @return Category[]
+     * {@inheritdoc}
      */
     public function findByParent(string $parentId = null): array
     {
@@ -57,8 +52,7 @@ class CategoryRepository
     }
 
     /**
-     * @param string|null $slug
-     * @return Category[]
+     * {@inheritdoc}
      */
     public function findBySlug(string $slug = null): ?array
     {
@@ -66,10 +60,7 @@ class CategoryRepository
     }
 
     /**
-     * @param Category $category
-     * @return Category
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * {@inheritdoc}
      */
     public function save(Category $category): Category
     {
@@ -80,10 +71,7 @@ class CategoryRepository
     }
 
     /**
-     * @param Category $category
-     * @return Category
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * {@inheritdoc}
      */
     public function update(Category $category): Category
     {

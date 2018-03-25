@@ -3,6 +3,7 @@
 namespace CategoriesBundle\Test\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Client;
 
 abstract class AbstractFunctionalTestCase extends WebTestCase
 {
@@ -31,6 +32,7 @@ abstract class AbstractFunctionalTestCase extends WebTestCase
     }
 
     /**
+     * @param string $content
      * @return object
      */
     protected function getJsonObject(string $content): object

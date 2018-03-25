@@ -13,6 +13,7 @@ class CategoriesContext extends MinkContext
      *
      * @param string $header
      * @param string $value
+     * @throws ExpectationException
      */
     public function headerContains(string $header, string $value)
     {
@@ -30,6 +31,8 @@ class CategoriesContext extends MinkContext
 
     /**
      * @Then Json response contains categories
+     *
+     * @throws ExpectationException
      */
     public function responseContainsCategories()
     {
@@ -45,6 +48,7 @@ class CategoriesContext extends MinkContext
      * @Then Json response contains categories:
      *
      * @param TableNode $table
+     * @throws ExpectationException
      */
     public function jsonResponseContainsCategories(TableNode $table)
     {
@@ -65,6 +69,7 @@ class CategoriesContext extends MinkContext
      * @Then Json response does not contain categories:
      *
      * @param TableNode $table
+     * @throws ExpectationException
      */
     public function jsonResponseDoesNotContainCategories(TableNode $table)
     {
