@@ -2,15 +2,16 @@
 
 namespace CategoriesBundle\Test\Unit\Service;
 
+use Doctrine\ORM\ORMException;
 use PHPUnit\Framework\TestCase;
 use CategoriesBundle\Service\EditCategoryService;
-use CategoriesBundle\Repository\CategoryRepository;
-use Doctrine\DBAL\Exception\ServerException;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use CategoriesBundle\Validator\JsonSchemaValidatorInterface;
 use CategoriesBundle\Service\CategoryDataService;
 use CategoriesBundle\Entity\Category;
 use JMS\Serializer\SerializerInterface;
 use \Mockery as m;
+use CategoriesBundle\Service\Patcher\DocumentPatcherInterface;
 
 class EditCategoryServiceTest extends TestCase
 {
@@ -22,7 +23,7 @@ class EditCategoryServiceTest extends TestCase
     private $editCategoryService;
 
     /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
+     * @expectedException \CategoriesBundle\Exception\CategoryNotFoundException
      */
     public function testUpdateCategoryServerError()
     {
@@ -40,8 +41,9 @@ class EditCategoryServiceTest extends TestCase
         $this->editCategoryService = new EditCategoryService(
             $this->mockJsonSchemaValidatorInterface(),
             $this->mockCategoryDataService(),
-            $this->mockCategoryRepository(),
-            $this->mockSerializerInterface()
+            $this->mockCategoryRepositoryInterface(),
+            $this->mockSerializerInterface(),
+            $this->mockDocumentPatcherInterface()
         );
     }
 
@@ -56,24 +58,24 @@ class EditCategoryServiceTest extends TestCase
     }
 
     /**
-     * @return CategoryRepository
+     * @return CategoryRepositoryInterface
      */
-    private function mockCategoryRepository(): CategoryRepository
+    private function mockCategoryRepositoryInterface(): CategoryRepositoryInterface
     {
-        $mock = m::mock(CategoryRepository::class);
+        $mock = m::mock(CategoryRepositoryInterface::class);
 
         $mock->shouldReceive('update')
-            ->andThrow($this->mockServerException());
+            ->andThrow($this->mockORMException());
 
         return $mock;
     }
 
     /**
-     * @return ServerException
+     * @return ORMException
      */
-    private function mockServerException(): ServerException
+    private function mockORMException(): ORMException
     {
-        $mock = m::mock(ServerException::class);
+        $mock = m::mock(ORMException::class);
 
         return $mock;
     }
@@ -115,12 +117,27 @@ class EditCategoryServiceTest extends TestCase
 
         $mock->shouldReceive('serialize')
             ->andReturn(
-                '{"id":"Foo","isVisible":true,"children":[],"slug":"Bar","name":"FooBar"}'
+                '{"id":"Foo","isVisible":false,"children":[],"slug":"Bar","name":"FooBar"}'
             );
 
         $mock->shouldReceive('deserialize')
             ->andReturn(
                 $this->createCategory()
+            );
+
+        return $mock;
+    }
+
+    /**
+     * @return DocumentPatcherInterface
+     */
+    private function mockDocumentPatcherInterface(): DocumentPatcherInterface
+    {
+        $mock = m::mock(DocumentPatcherInterface::class);
+
+        $mock->shouldReceive('patchDocument')
+            ->andReturn(
+                '{"id":"Foo","isVisible":true,"children":[],"slug":"Bar","name":"FooBar"}'
             );
 
         return $mock;
@@ -133,7 +150,7 @@ class EditCategoryServiceTest extends TestCase
     {
          $category = new Category();
          $category->setId('Foo');
-         $category->setIsVisible(true);
+         $category->setIsVisible(false);
          $category->setSlug('Bar');
          $category->setName('FooBar');
 

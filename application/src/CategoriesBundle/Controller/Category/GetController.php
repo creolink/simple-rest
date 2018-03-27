@@ -18,7 +18,7 @@ class GetController extends FOSRestController
      *
      * @SWG\Tag(name="Category controller")
      * @SWG\Response(
-     *  response=200, description="Returned with succesful request for category by `slug` value",
+     *  response=200, description="Returned with successful request for category by `slug` value",
      *  @Model(type=Category::class)
      * )
      * @SWG\Response(
@@ -96,7 +96,7 @@ class GetController extends FOSRestController
     }
 
     /**
-     * @return CreateCategoryService
+     * @return CategoryDataService|object
      */
     private function getCategoryDataService(): CategoryDataService
     {

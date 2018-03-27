@@ -12,6 +12,7 @@ use CategoriesBundle\Exception\CategoryNotFoundException;
 use CategoriesBundle\Exception\CategoryHttpException;
 use CategoriesBundle\Exception\InvalidJsonDataException;
 use CategoriesBundle\Entity\Category;
+use CategoriesBundle\Exception\DocumentPatchException;
 
 class UpdateController extends FOSRestController
 {
@@ -20,7 +21,7 @@ class UpdateController extends FOSRestController
      *
      * @SWG\Tag(name="Category controller")
      * @SWG\Response(
-     *  response=200, description="Returned with succesfull updated category visibility",
+     *  response=200, description="Returned with successful updated category visibility",
      *  @Model(type=Category::class)
      * )
      * @SWG\Response(
@@ -78,7 +79,7 @@ class UpdateController extends FOSRestController
         try {
             return $this->getEditCategoryService()
                 ->patchVisibility($id, $request->getContent());
-        } catch (CategoryNotFoundException | InvalidJsonDataException $exception) {
+        } catch (CategoryNotFoundException | InvalidJsonDataException | DocumentPatchException $exception) {
             throw new CategoryHttpException(
                 $exception->getCode(),
                 $exception->getMessage()
@@ -87,7 +88,7 @@ class UpdateController extends FOSRestController
     }
 
     /**
-     * @return CreateCategoryService
+     * @return EditCategoryService|object
      */
     private function getEditCategoryService(): EditCategoryService
     {

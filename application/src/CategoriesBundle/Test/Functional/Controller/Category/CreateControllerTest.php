@@ -143,7 +143,6 @@ class CreateControllerTest extends AbstractFunctionalTestCase
 
     /**
      * @param string $content
-     * @param string|null $id
      */
     private function createRequest(string $content = '')
     {

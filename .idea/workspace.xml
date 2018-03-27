@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d219f45-b682-4cb5-b7b9-53a9c859ff17" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/UpdateController.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/UpdateController.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepository.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepository.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/CategoryDataService.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/CategoryDataService.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/CreateCategoryService.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/CreateCategoryService.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/EditCategoryService.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/EditCategoryService.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/AbstractCategoriesTreeService.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/AbstractCategoriesTreeService.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Behat/CategoriesContext.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Behat/CategoriesContext.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/AbstractFunctionalTestCase.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/AbstractFunctionalTestCase.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Category/CreateControllerTest.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Category/CreateControllerTest.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/CategoryDataServiceTest.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/CategoryDataServiceTest.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/EditCategoryServiceTest.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/EditCategoryServiceTest.php" />
+      <change beforePath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/TreeHandler/CategoriesTreeServiceTest.php" afterPath="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/TreeHandler/CategoriesTreeServiceTest.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/application/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="CategoryRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#47#84#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryDataServiceTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/CategoryDataServiceTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="58" column="56" lean-forward="false" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+              <folding>
+                <element signature="e#54#85#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractCategoriesTreeService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/AbstractCategoriesTreeService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <folding>
+                <element signature="e#56#116#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryDataService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/CategoryDataService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-694">
+              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="e#44#101#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoriesTreeServiceTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/TreeHandler/CategoriesTreeServiceTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCategoryServiceTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/EditCategoryServiceTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+              <folding>
+                <element signature="e#54#84#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCategoryService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/EditCategoryService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateCategoryService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/CreateCategoryService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+              <folding>
+                <element signature="e#44#97#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryRepositoryInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepositoryInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-226">
+              <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+              <folding>
+                <element signature="e#47#84#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ServerException</find>
+      <find>ERROR_CATEGORY</find>
+      <find>CategoryRepository</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit</dir>
+      <dir>$PROJECT_DIR$/application/src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/GetController.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Entity/Category.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/Iterator/CategoryIteratorService.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/CategoriesTreeInterface.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Tree/TreeController.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Exception/SaveCategoryException.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/CreateController.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Exception/DocumentPatchException.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Exception/CategoryPatchException.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/Patcher/CategoryPatcherInterface.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/Patcher/CategoryPatcher.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/Patcher/DocumentPatcherInterface.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/UpdateController.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/Patcher/CategoryPatcherTest.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Behat/CategoriesContext.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Category/CreateControllerTest.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/AbstractFunctionalTestCase.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/EditCategoryService.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/CreateCategoryService.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/AbstractCategoriesTreeService.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Service/CategoryDataService.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/TreeHandler/CategoriesTreeServiceTest.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/CategoryDataServiceTest.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/EditCategoryServiceTest.php" />
+        <option value="$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepository.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/application/vendor/friendsofsymfony/http-cache" />
+      <path value="$PROJECT_DIR$/application/vendor/friendsofsymfony/http-cache-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/php-jsonpointer/php-jsonpointer" />
+      <path value="$PROJECT_DIR$/application/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/application/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/application/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/application/vendor/phpcollection/phpcollection" />
+      <path value="$PROJECT_DIR$/application/vendor/php-jsonpatch/php-jsonpatch" />
+      <path value="$PROJECT_DIR$/application/vendor/kriswallsmith/assetic" />
+      <path value="$PROJECT_DIR$/application/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/application/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/application/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/application/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/application/vendor/instaclick/php-webdriver" />
+      <path value="$PROJECT_DIR$/application/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/application/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/application/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/application/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/application/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/application/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/application/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/application/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/application/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/application/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/curl-client" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/application/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/application/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/application/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/creolink/code_style" />
+      <path value="$PROJECT_DIR$/application/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/application/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/assetic-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/application/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/application/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/application/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/application/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/application/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/application/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/application/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/application/vendor/knplabs/friendly-contexts" />
+      <path value="$PROJECT_DIR$/application/vendor/behatch/contexts" />
+      <path value="$PROJECT_DIR$/application/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/nelmio/alice" />
+      <path value="$PROJECT_DIR$/application/vendor/guzzle/guzzle" />
+      <path value="$PROJECT_DIR$/application/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/application/vendor/exsyst/swagger" />
+      <path value="$PROJECT_DIR$/application/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/behat" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/mink" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/mink-selenium2-driver" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/mink-goutte-driver" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/mink-browserkit-driver" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/mink-extension" />
+      <path value="$PROJECT_DIR$/application/vendor/behat/symfony2-extension" />
+      <path value="$PROJECT_DIR$/application/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/application/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/application/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/application/vendor/jms/parser-lib" />
+      <path value="$PROJECT_DIR$/application/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/application/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/application/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/application/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="77" />
+    <option name="width" value="1900" />
+    <option name="height" value="772" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="flaconi.git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flaconi.git" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="flaconi.git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flaconi.git" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="flaconi.git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flaconi.git" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="flaconi.git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flaconi.git" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CategoriesBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="flaconi.git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flaconi.git" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CategoriesBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/src/CategoriesBundle/Repository" />
+      <recent name="$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/Patcher" />
+      <recent name="$PROJECT_DIR$/application/src/CategoriesBundle/Service/Patcher" />
+      <recent name="$PROJECT_DIR$/application/src/CategoriesBundle/Exception" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d219f45-b682-4cb5-b7b9-53a9c859ff17" name="Default" comment="" />
+      <created>1521977827230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521977827230</updated>
+      <workItem from="1521977828336" duration="8555000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8555000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1920" height="1020" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/vendor/doctrine/orm/lib/Doctrine/ORM/OptimisticLockException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#56#116#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/DependencyInjection/CategoriesExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/vendor/phpunit/phpunit/src/Framework/Assert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="545" column="27" lean-forward="false" selection-start-line="545" selection-start-column="27" selection-end-line="545" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/AppBundle/Controller/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#40#97#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/AppBundle/Test/Functional/Controller/MainControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/AppBundle/AppBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/UpdateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="81" column="67" lean-forward="false" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
+          <folding>
+            <element signature="e#56#104#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/GetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1378">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#56#104#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Category/CreateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1198">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#56#104#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Controller/Tree/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1000">
+          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/DataObject/CategoryDto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2638">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#47#88#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/DataObject/TreeDto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#47#88#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3070">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/CategoryHttpException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/CategoryNotFoundException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/CategoryPatchException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/DocumentPatchException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/InvalidCategoryDataException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/InvalidJsonDataException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/SaveCategoryException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/Iterator/CategoryIterator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1450">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#53#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/Iterator/CategoryIteratorService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#53#84#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/Patcher/CategoryPatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#52#70#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/Patcher/DocumentPatcherInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/Transformer/CategoryTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#56#93#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/CategoriesTreeInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#56#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/TreeGeneratorService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-388">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#56#87#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/CompleteCategoriesTreeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/VisibleChildCategoriesTreeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#56#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Behat/CategoriesContext.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+          <folding>
+            <element signature="e#47#92#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Category/CreateControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="e#72#118#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Category/GetControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1036">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#72#118#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Test/WebTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/AbstractFunctionalTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#52#104#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Tree/TreeControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#68#114#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Functional/Controller/Category/UpdateControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#72#118#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Fixtures/Exception/FixtureNotFoundException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/Iterator/CategoryIteratorServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <element signature="e#63#94#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/Patcher/CategoryPatcherTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406">
+          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="e#54#116#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/CreateCategoryService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="e#44#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-226">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding>
+            <element signature="e#47#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/CategoryDataService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-694">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/EditCategoryService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/var/cache_test/ContainerQkejans/getCategories_Repository_CategoryService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="92" lean-forward="false" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/CategoryDataServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="58" column="56" lean-forward="false" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+          <folding>
+            <element signature="e#54#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/TreeHandler/CategoriesTreeServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit/Service/EditCategoryServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="e#54#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Service/TreeHandler/AbstractCategoriesTreeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="e#56#116#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Repository/CategoryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

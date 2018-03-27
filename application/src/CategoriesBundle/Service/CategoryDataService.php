@@ -2,22 +2,21 @@
 
 namespace CategoriesBundle\Service;
 
-use Doctrine\DBAL\Exception\ServerException;
 use CategoriesBundle\Exception\CategoryNotFoundException;
 use CategoriesBundle\Entity\Category;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 
 class CategoryDataService
 {
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     protected $repository;
 
     /**
-     * @param \CategoriesBundle\Service\CategoryRepository $repository
+     * @param CategoryRepositoryInterface $repository
      */
-    public function __construct(CategoryRepository $repository)
+    public function __construct(CategoryRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }
@@ -29,10 +28,7 @@ class CategoryDataService
      */
     public function getCategoryById(string $id): Category
     {
-        try {
-            $category = $this->repository->findOneById($id);
-        } catch (ServerException $exception) {
-        }
+        $category = $this->repository->findOneById($id);
 
         if (empty($category)) {
             throw new CategoryNotFoundException(
@@ -50,10 +46,7 @@ class CategoryDataService
      */
     public function getCategoryBySlug(string $slug): Category
     {
-        try {
-            $category = $this->repository->findOneBySlug($slug);
-        } catch (ServerException $exception) {
-        }
+        $category = $this->repository->findOneBySlug($slug);
 
         if (empty($category)) {
             throw new CategoryNotFoundException(

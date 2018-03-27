@@ -2,13 +2,16 @@
 
 namespace CategoriesBundle\Service;
 
+use CategoriesBundle\Exception\SaveCategoryException;
 use CategoriesBundle\Validator\JsonSchemaValidatorInterface;
-use CategoriesBundle\Repository\CategoryRepository;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use CategoriesBundle\Entity\Category;
 use JMS\Serializer\SerializerInterface;
 use CategoriesBundle\DataObject\CategoryDto;
 use CategoriesBundle\Service\Transformer\CategoryTransformer;
 use CategoriesBundle\Exception\InvalidCategoryDataException;
+use CategoriesBundle\Exception\InvalidJsonDataException;
+use Doctrine\ORM\ORMException;
 
 class CreateCategoryService
 {
@@ -18,7 +21,7 @@ class CreateCategoryService
     private $jsonSchemaValidator;
 
     /**
-     * @var CategoryRepository
+     * @var CategoryRepositoryInterface
      */
     protected $repository;
 
@@ -34,13 +37,13 @@ class CreateCategoryService
 
     /**
      * @param JsonSchemaValidatorInterface $jsonSchemaValidator
-     * @param CategoryRepository $repository
+     * @param CategoryRepositoryInterface $repository
      * @param CategoryTransformer $transformer
      * @param SerializerInterface $serializer
      */
     public function __construct(
         JsonSchemaValidatorInterface $jsonSchemaValidator,
-        CategoryRepository $repository,
+        CategoryRepositoryInterface $repository,
         CategoryTransformer $transformer,
         SerializerInterface $serializer
     ) {
@@ -53,8 +56,12 @@ class CreateCategoryService
     /**
      * @param string|null $content
      * @return Category
+     *
+     * @throws InvalidCategoryDataException
+     * @throws InvalidJsonDataException
+     * @throws SaveCategoryException
      */
-    public function createCategory(string $content = null)
+    public function createCategory(string $content = null): Category
     {
         if ($this->jsonSchemaValidator->validate($content)) {
             $categoryDto = $this->removeTags(
@@ -69,12 +76,23 @@ class CreateCategoryService
                 $this->getParentCategory($categoryDto)
             );
 
-            return $this->repository->save($category);
+            try {
+                return $this->repository->save($category);
+            } catch (ORMException $exception) {
+                throw new SaveCategoryException(
+                    sprintf(
+                        "Parent category `%s` does not exists!",
+                        $categoryDto->getParentCategory()
+                    )
+                );
+            }
         }
     }
 
     /**
+     * @param CategoryDto $categoryDto
      * @return Category|null
+     *
      * @throws InvalidCategoryDataException
      */
     private function getParentCategory(CategoryDto $categoryDto): ?Category
@@ -101,7 +119,7 @@ class CreateCategoryService
 
     /**
      * @param string $data
-     * @return CategoryDto
+     * @return CategoryDto|object
      */
     private function createCategoryDto(string $data): CategoryDto
     {
@@ -124,6 +142,7 @@ class CreateCategoryService
     /**
      * @param CategoryDto $categoryDto
      * @return void
+     *
      * @throws InvalidCategoryDataException
      */
     private function validateName(CategoryDto $categoryDto): void
@@ -138,6 +157,7 @@ class CreateCategoryService
     /**
      * @param CategoryDto $categoryDto
      * @return void
+     *
      * @throws InvalidCategoryDataException
      */
     private function validateSlug(CategoryDto $categoryDto): void

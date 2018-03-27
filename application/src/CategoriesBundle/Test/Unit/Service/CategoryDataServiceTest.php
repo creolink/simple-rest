@@ -4,8 +4,7 @@ namespace CategoriesBundle\Test\Unit\Service;
 
 use PHPUnit\Framework\TestCase;
 use CategoriesBundle\Service\CategoryDataService;
-use CategoriesBundle\Repository\CategoryRepository;
-use Doctrine\DBAL\Exception\ServerException;
+use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use \Mockery as m;
 
 class CategoryDataServiceTest extends TestCase
@@ -19,7 +18,7 @@ class CategoryDataServiceTest extends TestCase
     private $categoryDataService;
 
     /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
+     * @expectedException \CategoriesBundle\Exception\CategoryNotFoundException
      */
     public function testNotExistingCategoryById()
     {
@@ -27,27 +26,11 @@ class CategoryDataServiceTest extends TestCase
     }
 
     /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
-     */
-    public function testGetCategoryByIdServerError()
-    {
-        $this->categoryDataService->getCategoryById(self::ERROR_CATEGORY);
-    }
-
-    /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
+     * @expectedException \CategoriesBundle\Exception\CategoryNotFoundException
      */
     public function testNotExistingCategoryBySlug()
     {
         $this->categoryDataService->getCategoryBySlug(self::NOT_FOUND_CATEGORY);
-    }
-
-    /**
-     * @expectedException CategoriesBundle\Exception\CategoryNotFoundException
-     */
-    public function testGetCategoryBySlugServerError()
-    {
-        $this->categoryDataService->getCategoryBySlug(self::ERROR_CATEGORY);
     }
 
     /**
@@ -56,7 +39,7 @@ class CategoryDataServiceTest extends TestCase
     protected function setUp()
     {
         $this->categoryDataService = new CategoryDataService(
-            $this->mockCategoryRepository()
+            $this->mockCategoryRepositoryInterface()
         );
     }
 
@@ -71,37 +54,19 @@ class CategoryDataServiceTest extends TestCase
     }
 
     /**
-     * @return CategoryRepository
+     * @return CategoryRepositoryInterface
      */
-    private function mockCategoryRepository(): CategoryRepository
+    private function mockCategoryRepositoryInterface(): CategoryRepositoryInterface
     {
-        $mock = m::mock(CategoryRepository::class);
-
-        $mock->shouldReceive('findOneById')
-            ->with(self::ERROR_CATEGORY)
-            ->andThrow($this->mockServerException());
+        $mock = m::mock(CategoryRepositoryInterface::class);
 
         $mock->shouldReceive('findOneById')
             ->with(self::NOT_FOUND_CATEGORY)
             ->andReturn(null);
 
         $mock->shouldReceive('findOneBySlug')
-            ->with(self::ERROR_CATEGORY)
-            ->andThrow($this->mockServerException());
-
-        $mock->shouldReceive('findOneBySlug')
             ->with(self::NOT_FOUND_CATEGORY)
             ->andReturn(null);
-
-        return $mock;
-    }
-
-    /**
-     * @return ServerException
-     */
-    private function mockServerException(): ServerException
-    {
-        $mock = m::mock(ServerException::class);
 
         return $mock;
     }
