@@ -20,7 +20,7 @@ class MainControllerTest extends WebTestCase
 
         $this->assertGreaterThan(
             0,
-            $crawler->filter('html:contains("http://flaconi.develop/swagger")')->count()
+            $crawler->filter('html:contains("http://web.develop/swagger")')->count()
         );
     }
 }

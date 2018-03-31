@@ -5,7 +5,7 @@ parameters:
     secret:            6ceab3d65ff5665403d38e16401d19ff925db020
 
     database_host:     mysql
-    database_name:     flaconi
+    database_name:     web
     database_user:     root
     database_password: root
 

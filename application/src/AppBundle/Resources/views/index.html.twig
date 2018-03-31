@@ -32,42 +32,39 @@
         <div class="container">
             <h1>This is main page of Interview test made by Jakub Luczynski</h1>
             <h2>Objective</h2>
-            <p>
-                Create a simple project to provide a RESTful API to manage categories for an e-commerce website.</br>
-                More info on: https://github.com/Flaconi/coding-challenges/blob/master/senior-backend-engineer/restful-api-categories.md
-            </p>
+            <p>Create a simple project to provide a RESTful API to manage categories for an e-commerce website.</p>
             <h2>Usage</h2>
             <p>Main URLs</p>
             <ul>
-                <li>Site: `<a href="http://flaconi.develop/">http://flaconi.develop/</a>`</li>
+                <li>Site: `<a href="http://web.develop/">http://web.develop/</a>`</li>
                 <li>PHPMyAdmin: `<a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a>`</li>
-                <li>Swagger: `<a href="http://flaconi.develop/swagger" target="_blank">http://flaconi.develop/swagger</a>`</li>
-                <li>Code coverage: `<a href="http://flaconi.develop/coverage/index.html" target="_blank">http://flaconi.develop/coverage/index.html</a>` (please generate first with `make phpunit` on docker-php machine)</li>
+                <li>Swagger: `<a href="http://web.develop/swagger" target="_blank">http://web.develop/swagger</a>`</li>
+                <li>Code coverage: `<a href="http://web.develop/coverage/index.html" target="_blank">http://web.develop/coverage/index.html</a>` (please generate first with `make phpunit` on docker-php machine)</li>
             </ul>
 
             <p>Rest API Urls:</p>
             <ul>
-                <li>GET `http://flaconi.develop/api/tree`</li>
-                <li>GET `http://flaconi.develop/api/tree/{slug}`</li>
-                <li>POST `http://flaconi.develop/api/category`</li>
-                <li>GET `http://flaconi.develop/api/category/{slug}`</li>
-                <li>GET `http://flaconi.develop/api/category/id/{id}`</li>
-                <li>PATCH `http://flaconi.develop/api/category/id/{id}`</li>
+                <li>GET `http://web.develop/api/tree`</li>
+                <li>GET `http://web.develop/api/tree/{slug}`</li>
+                <li>POST `http://web.develop/api/category`</li>
+                <li>GET `http://web.develop/api/category/{slug}`</li>
+                <li>GET `http://web.develop/api/category/id/{id}`</li>
+                <li>PATCH `http://web.develop/api/category/id/{id}`</li>
             </ul>
 
-            <p>You can test it with `Postman` or included `<a href="http://flaconi.develop/swagger" target="_blank">Swagger</a>`.</p>
-            <p>More info about body parameters are available on `<a href="http://flaconi.develop/swagger" target="_blank">http://flaconi.develop/swagger</a>`</p>
+            <p>You can test it with `Postman` or included `<a href="http://web.develop/swagger" target="_blank">Swagger</a>`.</p>
+            <p>More info about body parameters are available on `<a href="http://web.develop/swagger" target="_blank">http://web.develop/swagger</a>`</p>
 
             <p>Clear cache on docker php machine `make clean`</p>
 
             <p>
-                Display test code coverage: `<a href="http://flaconi.develop/coverage/index.html" target="_blank">http://flaconi.develop/coverage/index.html</a>`<br/>
+                Display test code coverage: `<a href="http://web.develop/coverage/index.html" target="_blank">http://web.develop/coverage/index.html</a>`<br/>
                 (works only after it was created with `make phpunit` on docker-php machine)
             </p>
 
             <h2>Testing environment</h2>
             <p>Just add `/app_dev.php/` to URLs, for example:</p>
-            <p>`<a href="http://flaconi.develop/app_dev.php/api/tree" target="_blank">http://flaconi.develop/app_dev.php/api/tree</a>`</p>
+            <p>`<a href="http://web.develop/app_dev.php/api/tree" target="_blank">http://web.develop/app_dev.php/api/tree</a>`</p>
         </div>
 
         {% block body %}{% endblock %}
