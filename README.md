@@ -159,7 +159,6 @@ make phpcs
 
 Screens:
 
-![](application/web/doc/develop-swagger.1.png)
 ![](application/web/doc/develop-swagger.2.png)
 ![](application/web/doc/develop-swagger.3.png)
 ![](application/web/doc/develop-swagger.4.png)
