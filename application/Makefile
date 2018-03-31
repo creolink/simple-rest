@@ -79,7 +79,7 @@ docker-clean:
 
 docker-php:
 	@echo "\nWelcome to PHP machine\n"
-	@docker exec -i -t flaconi_php bash
+	@docker exec -i -t web_php bash
 	@exit
 
 docker-remove-images:

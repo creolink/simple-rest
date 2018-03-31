@@ -1,11 +1,6 @@
-#Flaconi recrutation test#
-
-===============================================================
-
 #Objective#
 
 Create a simple project to provide a RESTful API to manage categories for an e-commerce website.
-More info on: https://github.com/Flaconi/coding-challenges/blob/master/senior-backend-engineer/restful-api-categories.md
 
 --------------
 
@@ -27,7 +22,7 @@ Configure hosts
 ```sudo vim /etc/hosts```
 
 add line
-```192.100.10.20 flaconi.develop www.flaconi.develop```
+```192.100.10.20 web.develop www.web.develop```
 
 Rest should be already configured by docker & composer.
 
@@ -47,13 +42,13 @@ Application configuration is in: `.../application/app/config/parameters.yml.dist
 
 #Installation & Run#
 
-In order to build images and run docker go to `flaconi/application/` and execute `make docker-up` (you should't need sudo here)
+In order to build images and run docker go to `application/` and execute `make docker-up` (you should't need sudo here)
 
 With error: `Couldn't connect to Docker daemon at http+docker://localunixsocket` do:
 
 - `usermod -aG docker ${USER}` and relogin
 
-Building images takes a while, but at the end you should be logged in into `flaconi_php` docker machine and site should be available in obrowser.
+Building images takes a while, but at the end you should be logged in into `php` docker machine and site should be available in obrowser.
 If the site does not work (`autoloader missed`) please wait a moment. Docker-composer is installing vendor components. Please check `/vendor/` folder - there should be created folders.
 In any case, please install everything with composer (on docker `php` machine): `php composer.phar install`
 
@@ -72,33 +67,33 @@ Environment:
 
 #Usage#
 
-* Site: `http://flaconi.develop/`
+* Site: `http://web.develop/`
 * PHPMyAdmin: `http://localhost:8080/`
-* Swagger: `http://flaconi.develop/swagger`
+* Swagger: `http://web.develop/swagger`
 
 Rest API Url:
 
-* GET `http://flaconi.develop/api/tree`
-* GET `http://flaconi.develop/api/tree/{slug}`
-* POST `http://flaconi.develop/api/category`
-* GET `http://flaconi.develop/api/category/{slug}`
-* GET `http://flaconi.develop/api/category/id/{id}`
-* PATCH `http://flaconi.develop/api/category/id/{id}`
+* GET `http://web.develop/api/tree`
+* GET `http://web.develop/api/tree/{slug}`
+* POST `http://web.develop/api/category`
+* GET `http://web.develop/api/category/{slug}`
+* GET `http://web.develop/api/category/id/{id}`
+* PATCH `http://web.develop/api/category/id/{id}`
 
 You can test it with `Postman` or included `Swagger`.
-More info about body parameters are available on `http://flaconi.develop/swagger`
+More info about body parameters are available on `http://web.develop/swagger`
 
-PHPMyAdmin user / password: `root` / `root`. Database name: `flaconi`.
+PHPMyAdmin user / password: `root` / `root`. Database name: `web`.
 
 Use `make` to get info about possible commands. For example in order to clear cache on docker php machine use ```make clean``` (on docker machine).
 
-Display test code coverage: http://flaconi.develop/coverage/index.html (after it was created with `make phpunit`)
+Display test code coverage: http://web.develop/coverage/index.html (after it was created with `make phpunit`)
 
 All mentioned urls provide `production` environment.
 In order to use testing environment - just add `/app_dev.php/` to URLs, for example:
 
-* SWAGGER `http://flaconi.develop/app_dev.php/swagger`
-* GET `http://flaconi.develop/app_dev.php/api/tree`
+* SWAGGER `http://web.develop/app_dev.php/swagger`
+* GET `http://web.develop/app_dev.php/api/tree`
 
 
 --------------
@@ -124,19 +119,12 @@ You can use `mc` in `php` & `server` machine if needed.
 Codestyles are checked using Symfony standards: https://github.com/creolink/code_style
 
 
-# Special thanks to Flaconi HR Team for this opportunity. #
-
-I'm sorry, I haven't covered all codes with tests (behat with fixtures especially), because I just didn't have enough time.
-I used `Swagger` `@SWG` annotations instead of `@ApiDoc` because, `@ApiDoc` is deprecated by Nelmio 3
- ( please read https://github.com/nelmio/NelmioApiDocBundle/blob/master/UPGRADE-3.0.md )
-
-
 # Warning! #
 
  * Do not delete `var` folder!
  * Using `phpunit` with functional testing changes rights of `var/*` folders. It is the best to use `make clean` after testing.
    (I haven't fixed this yet)
- * Behat and Functional tests are prepared to work with `http://flaconi.develop/` address and `flaconi` database.
+ * Behat and Functional tests are prepared to work with `http://web.develop/` address and `web` database.
    This means, tests passes only for default database.
    This also means, that tests of update / create works on existing values (create new categories)
    I just didn't have time to configure everything properly.
@@ -171,14 +159,14 @@ make phpcs
 
 Screens:
 
-![](application/web/doc/flaconi.develop-swagger.1.png)
-![](application/web/doc/flaconi.develop-swagger.2.png)
-![](application/web/doc/flaconi.develop-swagger.3.png)
-![](application/web/doc/flaconi.develop-swagger.4.png)
-![](application/web/doc/flaconi.develop-swagger.5.png)
-![](application/web/doc/flaconi.develop-swagger.6.png)
+![](application/web/doc/develop-swagger.1.png)
+![](application/web/doc/develop-swagger.2.png)
+![](application/web/doc/develop-swagger.3.png)
+![](application/web/doc/develop-swagger.4.png)
+![](application/web/doc/develop-swagger.5.png)
+![](application/web/doc/develop-swagger.6.png)
 
-![](application/web/doc/flaconi.tests.1.png)
+![](application/web/doc/tests.1.png)
 
-![](application/web/doc/flaconi.coverage.1.png)
+![](application/web/doc/coverage.1.png)
 
