@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d219f45-b682-4cb5-b7b9-53a9c859ff17" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_docker/containers/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/_docker/containers/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_docker/launch.sh" beforeDir="false" afterPath="$PROJECT_DIR$/_docker/launch.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/application/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +35,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_docker/containers/php/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+            <state relative-caret-position="191">
+              <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Company.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/vendor/fzaninotto/faker/src/Faker/Provider/en_US/Company.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="51" column="621" selection-start-line="51" selection-start-column="621" selection-end-line="51" selection-end-column="621" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -74,6 +98,7 @@
       <find>CategoryRepository</find>
       <find>flaconi.develop</find>
       <find>flaconi</find>
+      <find>Interview</find>
     </findStrings>
     <replaceStrings>
       <replace>web.develop</replace>
@@ -81,8 +106,8 @@
     <dirStrings>
       <dir>$PROJECT_DIR$/application/src/CategoriesBundle/Test/Unit</dir>
       <dir>$PROJECT_DIR$/application/src</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/_docker</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -129,6 +154,8 @@
         <option value="$PROJECT_DIR$/application/Makefile" />
         <option value="$PROJECT_DIR$/_docker/launch.sh" />
         <option value="$PROJECT_DIR$/_docker/containers/php/Dockerfile" />
+        <option value="$PROJECT_DIR$/application/composer.json" />
+        <option value="$PROJECT_DIR$/application/app/config/config.yml" />
       </list>
     </option>
   </component>
@@ -364,27 +391,28 @@
       <workItem from="1522485214470" duration="465000" />
       <workItem from="1522491184711" duration="402000" />
       <workItem from="1522492688210" duration="795000" />
-      <workItem from="1522949910050" duration="2066000" />
+      <workItem from="1522949910050" duration="2275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16207000" />
+    <option name="totallyTimeSpent" value="16416000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1020" extended-state="7" />
+    <frame x="0" y="27" width="1920" height="1020" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info active="true" anchor="bottom" id="Find" order="5" visible="true" weight="0.32925472" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -393,7 +421,6 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32925472" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,16 +435,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/CategoryPatchException.php" />
-    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/DocumentPatchException.php" />
-    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/InvalidCategoryDataException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Exception/SaveCategoryException.php" />
     <entry file="file://$PROJECT_DIR$/application/src/CategoriesBundle/Test/Behat/CategoriesContext.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1602">
@@ -687,8 +704,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_docker/containers/php/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        <state relative-caret-position="191">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/vendor/fzaninotto/faker/src/Faker/Provider/en_US/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="51" column="621" selection-start-line="51" selection-start-column="621" selection-end-line="51" selection-end-column="621" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/vendor/symfony/symfony/src/Symfony/Component/Console/Helper/QuestionHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="396" column="31" selection-start-line="396" selection-start-column="31" selection-end-line="396" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="40" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="106" column="44" lean-forward="true" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
         </state>
       </provider>
     </entry>
