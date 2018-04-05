@@ -67,8 +67,9 @@ clean-coverage:
 
 docker-up:
 	@cd ../_docker/ && sh launch.sh
-	@make docker-php
 	@make clean
+	@rm -fR web/coverage
+	@make docker-php
 	@exit
 
 docker-down:

@@ -47,8 +47,7 @@ services:
             dockerfile: Dockerfile
         volumes:
             - "../application:/var/www/html"
-        command:
-            - folders.sh
+        command: folders.sh
         depends_on:
             - php
             - web
