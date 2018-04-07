@@ -169,3 +169,11 @@ Screens:
 
 ![](application/web/doc/coverage.1.png)
 
+
+TO read:
+ * http://microservices.io/patterns/
+ * https://www.infoq.com/articles/microservices-intro
+ * https://roxanageambasu.github.io/publications/eurosys2015synapse.pdf
+ * https://auth0.com/blog/introduction-to-microservices-part-4-dependencies/
+ * https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/architect-microservice-container-applications/identify-microservice-domain-model-boundaries
+ * https://martinfowler.com/bliki/CQRS.html
