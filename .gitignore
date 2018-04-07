@@ -15,4 +15,4 @@
 /application/web/bundles/
 /nbproject/private/
 _docker/data/
-/.idea/
+/.idea/*

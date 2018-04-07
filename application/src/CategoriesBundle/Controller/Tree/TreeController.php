@@ -18,11 +18,11 @@ class TreeController extends FOSRestController
      *
      * @SWG\Tag(name="Tree controller")
      * @SWG\Response(
-     *  response=200, description="Returnend with full tree of all categories (including invisible positions)",
+     *  response=200, description="Returns full tree of all categories (including invisible positions)",
      *  @Model(type=TreeDto::class)
      * )
      * @SWG\Response(
-     *  response=500, description="Returned when any internal server error occurs"
+     *  response=500, description="Returns when any internal server error occurs"
      * )
      *
      * @return TreeDto
@@ -39,14 +39,14 @@ class TreeController extends FOSRestController
      *
      * @SWG\Tag(name="Tree controller")
      * @SWG\Response(
-     *  response=200, description="Returned with list of parent categories in tree by `slug` value",
+     *  response=200, description="Returns with list of parent categories in tree by `slug` value",
      *  @Model(type=TreeDto::class)
      * )
      * @SWG\Response(
-     *  response=404, description="Returned when category is not found or `slug` is empty"
+     *  response=404, description="Returns when category is not found or `slug` is empty"
      * )
      * @SWG\Response(
-     *  response=500, description="Returned when any internal server error occurs"
+     *  response=500, description="Returns when any internal server error occurs"
      * )
      * @SWG\Parameter(
      *  name="slug",
