@@ -111,7 +111,7 @@ fos_http_cache:
 nelmio_api_doc:
     documentation:
         info:
-            title: Simple Microservices - Rest
+            title: Simple Rest
             version: 1.0.1
     areas:
         path_patterns: # an array of regexps
