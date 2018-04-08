@@ -5,6 +5,8 @@ namespace CategoriesBundle\Repository;
 use CategoriesBundle\Entity\Category;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\ORMException;
+use CategoriesBundle\Exception\CategoryPatchException;
 
 class CategoryRepository implements CategoryRepositoryInterface
 {
@@ -75,10 +77,20 @@ class CategoryRepository implements CategoryRepositoryInterface
      */
     public function update(Category $category): Category
     {
-        $this->entityManager->flush(
-            $this->entityManager->merge($category)
-        );
+        try {
+            $this->entityManager->flush(
+                $this->entityManager->merge($category)
+            );
 
-        return $category;
+            return $category;
+        } catch (ORMException $exception) {
+            throw new CategoryPatchException(
+                sprintf(
+                    "Category `%s` cannon be saved: `%s`",
+                    $category->getId(),
+                    $exception->getMessage()
+                )
+            );
+        }
     }
 }

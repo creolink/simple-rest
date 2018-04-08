@@ -4,10 +4,10 @@ namespace CategoriesBundle\Service;
 
 use CategoriesBundle\Exception\CategoryNotFoundException;
 use CategoriesBundle\Entity\Category;
+use CategoriesBundle\Exception\CategoryPatchException;
 use CategoriesBundle\Repository\CategoryRepositoryInterface;
 use JMS\Serializer\SerializerInterface;
 use CategoriesBundle\Validator\JsonSchemaValidatorInterface;
-use Doctrine\ORM\ORMException;
 use CategoriesBundle\Exception\InvalidJsonDataException;
 use CategoriesBundle\Service\Patcher\DocumentPatcherInterface;
 use CategoriesBundle\Exception\DocumentPatchException;
@@ -72,33 +72,15 @@ class EditCategoryService
     {
         $category = $this->categoryDataService->getCategoryById($id);
 
-        if ($this->jsonSchemaValidator->validate($content)) {
-            $categoryJson = $this->serializer->serialize($category, 'json');
+        $this->jsonSchemaValidator->validate($content);
 
-            $patchedCategory = $this->getPatchedCategory(
-                $this->documentPatcher->patchDocument($id, $categoryJson, $content)
-            );
+        $categoryJson = $this->serializer->serialize($category, 'json');
 
-            try {
-                return $this->repository->update($patchedCategory);
-            } catch (ORMException $exception) {
-                throw new CategoryNotFoundException(
-                    $this->createNotFoundErrorMessage($id)
-                );
-            }
-        }
-    }
-
-    /**
-     * @param string $category
-     * @return string
-     */
-    private function createNotFoundErrorMessage(string $category): string
-    {
-        return sprintf(
-            "Category `%s `not found",
-            $category
+        $patchedCategory = $this->getPatchedCategory(
+            $this->documentPatcher->patchDocument($id, $categoryJson, $content)
         );
+
+        return $this->repository->update($patchedCategory);
     }
 
     /**

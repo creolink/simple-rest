@@ -26,6 +26,5 @@ class ListController extends FOSRestController
      */
     public function getTreeAction(): ListDto
     {
-
     }
 }

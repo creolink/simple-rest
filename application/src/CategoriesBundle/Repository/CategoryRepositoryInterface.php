@@ -3,6 +3,7 @@
 namespace CategoriesBundle\Repository;
 
 use CategoriesBundle\Entity\Category;
+use CategoriesBundle\Exception\CategoryPatchException;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\OptimisticLockException;
 
@@ -43,8 +44,7 @@ interface CategoryRepositoryInterface
     /**
      * @param Category $category
      * @return Category
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws CategoryPatchException
      */
     public function update(Category $category): Category;
 }

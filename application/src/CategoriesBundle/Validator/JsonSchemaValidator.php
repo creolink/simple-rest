@@ -49,16 +49,14 @@ class JsonSchemaValidator implements JsonSchemaValidatorInterface
 
         if ($validator->isValid()) {
             return true;
-        } else {
-            $errors = [];
-
-            $errors[] = 'JSON does not validate. Violations:';
-            foreach ($validator->getErrors() as $error) {
-                $errors[] = sprintf('[%s] %s', $error['property'], $error['message']);
-            }
-
-            throw new InvalidJsonDataException(json_encode($errors));
         }
+
+        $errors[] = 'JSON does not validate. Violations:';
+        foreach ($validator->getErrors() as $error) {
+            $errors[] = sprintf('[%s] %s', $error['property'], $error['message']);
+        }
+
+        throw new InvalidJsonDataException(json_encode($errors));
     }
 
     /**

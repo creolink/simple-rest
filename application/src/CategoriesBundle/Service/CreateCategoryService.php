@@ -63,29 +63,29 @@ class CreateCategoryService
      */
     public function createCategory(string $content = null): Category
     {
-        if ($this->jsonSchemaValidator->validate($content)) {
-            $categoryDto = $this->removeTags(
-                $this->createCategoryDto($content)
+        $this->jsonSchemaValidator->validate($content);
+
+        $categoryDto = $this->removeTags(
+            $this->createCategoryDto($content)
+        );
+
+        $this->validateSlug($categoryDto);
+        $this->validateName($categoryDto);
+
+        $category = $this->transformer->reverseTransform(
+            $categoryDto,
+            $this->getParentCategory($categoryDto)
+        );
+
+        try {
+            return $this->repository->save($category);
+        } catch (ORMException $exception) {
+            throw new SaveCategoryException(
+                sprintf(
+                    "Parent category `%s` does not exists!",
+                    $categoryDto->getParentCategory()
+                )
             );
-
-            $this->validateSlug($categoryDto);
-            $this->validateName($categoryDto);
-
-            $category = $this->transformer->reverseTransform(
-                $categoryDto,
-                $this->getParentCategory($categoryDto)
-            );
-
-            try {
-                return $this->repository->save($category);
-            } catch (ORMException $exception) {
-                throw new SaveCategoryException(
-                    sprintf(
-                        "Parent category `%s` does not exists!",
-                        $categoryDto->getParentCategory()
-                    )
-                );
-            }
         }
     }
 

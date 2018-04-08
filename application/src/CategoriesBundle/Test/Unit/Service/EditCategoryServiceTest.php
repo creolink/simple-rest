@@ -2,7 +2,7 @@
 
 namespace CategoriesBundle\Test\Unit\Service;
 
-use Doctrine\ORM\ORMException;
+use CategoriesBundle\Exception\CategoryPatchException;
 use PHPUnit\Framework\TestCase;
 use CategoriesBundle\Service\EditCategoryService;
 use CategoriesBundle\Repository\CategoryRepositoryInterface;
@@ -23,7 +23,7 @@ class EditCategoryServiceTest extends TestCase
     private $editCategoryService;
 
     /**
-     * @expectedException \CategoriesBundle\Exception\CategoryNotFoundException
+     * @expectedException \CategoriesBundle\Exception\CategoryPatchException
      */
     public function testUpdateCategoryServerError()
     {
@@ -65,17 +65,17 @@ class EditCategoryServiceTest extends TestCase
         $mock = m::mock(CategoryRepositoryInterface::class);
 
         $mock->shouldReceive('update')
-            ->andThrow($this->mockORMException());
+            ->andThrow($this->mockCategoryPatchExceptionn());
 
         return $mock;
     }
 
     /**
-     * @return ORMException
+     * @return CategoryPatchException
      */
-    private function mockORMException(): ORMException
+    private function mockCategoryPatchExceptionn(): CategoryPatchException
     {
-        $mock = m::mock(ORMException::class);
+        $mock = m::mock(CategoryPatchException::class);
 
         return $mock;
     }

@@ -20,22 +20,6 @@ class CategoryDto
 
     /**
      * @Type("string")
-     * @SerializedName("parentCategory")
-     *
-     * @var string|null
-     */
-    private $parentCategory;
-
-    /**
-     * @Type("boolean")
-     * @SerializedName("isVisible")
-     *
-     * @var bool
-     */
-    private $isVisible;
-
-    /**
-     * @Type("string")
      *
      * @var string
      */
@@ -69,46 +53,6 @@ class CategoryDto
     public function setId(string $id): self
     {
         $this->id = $id;
-
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getParentCategory(): ?string
-    {
-        return $this->parentCategory;
-    }
-
-    /**
-     * @param string|null $parentCategory
-     *
-     * @return self
-     */
-    public function setParentCategory(string $parentCategory = null): self
-    {
-        $this->parentCategory = $parentCategory;
-
-        return $this;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getIsVisible(): bool
-    {
-        return $this->isVisible;
-    }
-
-    /**
-     * @param bool $isVisible
-     *
-     * @return self
-     */
-    public function setIsVisible(bool $isVisible): self
-    {
-        $this->isVisible = $isVisible;
 
         return $this;
     }
