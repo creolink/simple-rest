@@ -22,15 +22,19 @@ class TreeGeneratorService
     }
 
     /**
-     * @param RecursiveIteratorIterator $categories
+     * @param RecursiveIteratorIterator|null $categories
      * @param bool $hasParent
      * @return TreeDto
      */
     public function createTree(
-        RecursiveIteratorIterator $categories,
+        ?RecursiveIteratorIterator $categories,
         bool $hasParent = true
     ): TreeDto {
         $treeDto = new TreeDto();
+
+        if (empty($categories)) {
+            return $treeDto;
+        }
 
         foreach ($categories as $category) {
             $depth = $categories->getDepth();

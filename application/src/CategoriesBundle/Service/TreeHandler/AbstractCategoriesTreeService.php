@@ -3,9 +3,9 @@
 namespace CategoriesBundle\Service\TreeHandler;
 
 use CategoriesBundle\Repository\CategoryRepositoryInterface;
-use \RecursiveIteratorIterator;
 use CategoriesBundle\DataObject\TreeDto;
 use CategoriesBundle\Service\Iterator\CategoryIteratorService;
+use CategoriesBundle\DataObject\ParametersDto;
 
 abstract class AbstractCategoriesTreeService implements CategoriesTreeInterface
 {
@@ -42,24 +42,5 @@ abstract class AbstractCategoriesTreeService implements CategoriesTreeInterface
     /**
      * {@inheritDoc}
      */
-    abstract public function getTree(string $slug = null): TreeDto;
-
-    /**
-     * @param RecursiveIteratorIterator|null $iteratedCategories
-     * @param bool $hasParent
-     * @return TreeDto
-     */
-    protected function createTree(
-        ?RecursiveIteratorIterator $iteratedCategories,
-        bool $hasParent = true
-    ): TreeDto {
-        if (empty($iteratedCategories)) {
-            return new TreeDto();
-        }
-
-        return $this->treeGeneratorService->createTree(
-            $iteratedCategories,
-            $hasParent
-        );
-    }
+    abstract public function getTree(ParametersDto $parameters = null): TreeDto;
 }

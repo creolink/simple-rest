@@ -2,6 +2,7 @@
 
 namespace CategoriesBundle\Controller\Tree;
 
+use CategoriesBundle\DataObject\ParametersDto;
 use CategoriesBundle\DataObject\TreeDto;
 use CategoriesBundle\Service\TreeHandler\CategoriesTreeInterface;
 use CategoriesBundle\Exception\CategoryNotFoundException;
@@ -60,9 +61,12 @@ class TreeController extends FOSRestController
      */
     public function getTreeBySlugAction(string $slug = null): TreeDto
     {
+        $parameters = new ParametersDto();
+        $parameters->setSlug($slug);
+
         try {
             return $this->getVisibleChildCategoriesTreeService()
-                ->getTree($slug);
+                ->getTree($parameters);
         } catch (CategoryNotFoundException $exception) {
             throw new CategoryHttpException(
                 $exception->getCode(),

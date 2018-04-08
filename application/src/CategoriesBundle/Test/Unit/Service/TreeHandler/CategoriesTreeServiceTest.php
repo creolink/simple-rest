@@ -2,6 +2,7 @@
 
 namespace CategoriesBundle\Test\Unit\Service\TreeHandler;
 
+use CategoriesBundle\DataObject\ParametersDto;
 use PHPUnit\Framework\TestCase;
 use CategoriesBundle\Test\Unit\Traits\FixturesTrait;
 use CategoriesBundle\Service\TreeHandler\CompleteCategoriesTreeService;
@@ -63,7 +64,7 @@ class CategoriesTreeServiceTest extends TestCase
             $this->mockTreeGeneratorService()
         );
 
-        $categoriesTree->getTree();
+        $categoriesTree->getTree(new ParametersDto());
     }
 
     /**
@@ -77,7 +78,10 @@ class CategoriesTreeServiceTest extends TestCase
             $this->mockTreeGeneratorService()
         );
 
-        $tree = $categoriesTree->getTree(self::CATEGORY_SLUG);
+        $parameters = new ParametersDto();
+        $parameters->setSlug(self::CATEGORY_SLUG);
+
+        $tree = $categoriesTree->getTree($parameters);
         $this->assertInstanceOf(TreeDto::class, $tree);
 
         $categories = $tree->getCategories();

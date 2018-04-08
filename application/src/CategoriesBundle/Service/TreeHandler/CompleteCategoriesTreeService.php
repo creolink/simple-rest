@@ -3,17 +3,20 @@
 namespace CategoriesBundle\Service\TreeHandler;
 
 use CategoriesBundle\DataObject\TreeDto;
+use CategoriesBundle\DataObject\ParametersDto;
 
 class CompleteCategoriesTreeService extends AbstractCategoriesTreeService
 {
     /**
      * {@inheritDoc}
      */
-    public function getTree(string $slug = null): TreeDto
+    public function getTree(ParametersDto $parameters = null): TreeDto
     {
-        return $this->createTree(
+        $categories = $this->repository->findByParent();
+
+        return $this->treeGeneratorService->createTree(
             $this->categoryIteratorService->getIteratedCategories(
-                $this->repository->findByParent()
+                $categories
             )
         );
     }
