@@ -4,8 +4,7 @@ namespace CategoriesBundle\Repository;
 
 use CategoriesBundle\Entity\Category;
 use CategoriesBundle\Exception\CategoryPatchException;
-use Doctrine\ORM\ORMException;
-use Doctrine\ORM\OptimisticLockException;
+use CategoriesBundle\Exception\SaveCategoryException;
 
 interface CategoryRepositoryInterface
 {
@@ -36,8 +35,7 @@ interface CategoryRepositoryInterface
     /**
      * @param Category $category
      * @return Category
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws SaveCategoryException
      */
     public function save(Category $category): Category;
 

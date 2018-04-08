@@ -7,6 +7,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\ORMException;
 use CategoriesBundle\Exception\CategoryPatchException;
+use CategoriesBundle\Exception\SaveCategoryException;
 
 class CategoryRepository implements CategoryRepositoryInterface
 {
@@ -66,10 +67,16 @@ class CategoryRepository implements CategoryRepositoryInterface
      */
     public function save(Category $category): Category
     {
-        $this->entityManager->persist($category);
-        $this->entityManager->flush($category);
+        try {
+            $this->entityManager->persist($category);
+            $this->entityManager->flush($category);
 
-        return $category;
+            return $category;
+        } catch (ORMException $exception) {
+            throw new SaveCategoryException(
+                $this->getErrorMessage($category, $exception->getMessage())
+            );
+        }
     }
 
     /**
@@ -85,12 +92,22 @@ class CategoryRepository implements CategoryRepositoryInterface
             return $category;
         } catch (ORMException $exception) {
             throw new CategoryPatchException(
-                sprintf(
-                    "Category `%s` cannon be saved: `%s`",
-                    $category->getId(),
-                    $exception->getMessage()
-                )
+                $this->getErrorMessage($category, $exception->getMessage())
             );
         }
+    }
+
+    /**
+     * @param Category $category
+     * @param string $message
+     * @return string
+     */
+    private function getErrorMessage(Category $category, string $message)
+    {
+        return sprintf(
+            "Category `%s` cannon be saved: `%s`",
+            $category->getId(),
+            $message
+        );
     }
 }

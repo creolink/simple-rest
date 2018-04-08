@@ -77,16 +77,7 @@ class CreateCategoryService
             $this->getParentCategory($categoryDto)
         );
 
-        try {
-            return $this->repository->save($category);
-        } catch (ORMException $exception) {
-            throw new SaveCategoryException(
-                sprintf(
-                    "Parent category `%s` does not exists!",
-                    $categoryDto->getParentCategory()
-                )
-            );
-        }
+        return $this->repository->save($category);
     }
 
     /**

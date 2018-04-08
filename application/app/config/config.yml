@@ -62,7 +62,6 @@ doctrine:
                 mappings:
                     CategoriesBundle: ~
 
-
 fos_rest:
     disable_csrf_role: ROLE_API
     param_fetcher_listener: true
