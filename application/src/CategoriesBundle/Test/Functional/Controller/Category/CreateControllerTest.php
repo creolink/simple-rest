@@ -7,8 +7,8 @@ use CategoriesBundle\Test\Functional\AbstractFunctionalTestCase;
 
 class CreateControllerTest extends AbstractFunctionalTestCase
 {
-    const PARENT_CATEGORY_ID = 'd364a92c-21e6-11e8-9754-0242c0640a02';
-    const CATEGORY_SLUG = 'categoryA4-slug';
+    private const PARENT_CATEGORY_ID = 'd364a92c-21e6-11e8-9754-0242c0640a02';
+    private const CATEGORY_SLUG = 'categoryA4-slug';
 
     /**
      * @test

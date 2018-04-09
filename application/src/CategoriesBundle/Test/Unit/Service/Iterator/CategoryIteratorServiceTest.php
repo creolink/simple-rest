@@ -14,7 +14,7 @@ class CategoryIteratorServiceTest extends TestCase
 {
     use FixturesTrait;
 
-    const FIXTURE_FILE = 'categories.json';
+    private const FIXTURE_FILE = 'categories.json';
 
     /**
      * @covers ::getIteratedCategories

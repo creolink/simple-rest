@@ -9,8 +9,8 @@ use \Mockery as m;
 
 class CategoryDataServiceTest extends TestCase
 {
-    const ERROR_CATEGORY = 'ERROR';
-    const NOT_FOUND_CATEGORY = 'BAR';
+    private const ERROR_CATEGORY = 'ERROR';
+    private const NOT_FOUND_CATEGORY = 'BAR';
 
     /**
      * @var CategoryDataService

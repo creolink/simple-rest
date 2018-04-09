@@ -7,7 +7,7 @@ use CategoriesBundle\Test\Functional\AbstractFunctionalTestCase;
 
 class UpdateControllerTest extends AbstractFunctionalTestCase
 {
-    const TESTED_CATEGORY_ID = 'd364a92c-21e6-11e8-9754-0242c0640a02';
+    private const TESTED_CATEGORY_ID = 'd364a92c-21e6-11e8-9754-0242c0640a02';
 
     /**
      * @test

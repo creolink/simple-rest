@@ -19,9 +19,8 @@ class CategoriesTreeServiceTest extends TestCase
 {
     use FixturesTrait;
 
-    const FIXTURE_FILE = 'categories.json';
-
-    const CATEGORY_SLUG = 'categoryA1-slug';
+    private const FIXTURE_FILE = 'categories.json';
+    private const CATEGORY_SLUG = 'categoryA1-slug';
 
     /**
      * @var CategoryRepositoryInterface

@@ -15,7 +15,7 @@ use CategoriesBundle\Service\Patcher\DocumentPatcherInterface;
 
 class EditCategoryServiceTest extends TestCase
 {
-    const ERROR_CATEGORY = 'ERROR';
+    private const ERROR_CATEGORY = 'ERROR';
 
     /**
      * @var EditCategoryService
